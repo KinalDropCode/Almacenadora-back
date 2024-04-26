@@ -1,0 +1,57 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "Almacenadora",
+    "collectionId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
+    "dateExported": "2024-04-26T01:49:06.547Z",
+    "version": "1.2",
+    "folders": [],
+    "requests": [
+        {
+            "_id": "961615d3-5155-4d74-b5ec-8ca011191548",
+            "colId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
+            "containerId": "",
+            "name": "Create-Task",
+            "url": "/task/create",
+            "method": "POST",
+            "sortNum": 10000,
+            "created": "2024-04-25T17:25:33.602Z",
+            "modified": "2024-04-25T17:52:59.421Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameTask\": \"2\",\n  \"description\": \"Descripción de la tarea\",\n  \"startDate\": \"2024-04-25T12:00:00.000Z\",\n  \"endDate\": \"2024-04-30T12:00:00.000Z\",\n  \"author\": \"Juan\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "29a538b4-6869-4ec5-acac-eba2056d3f65",
+            "colId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
+            "containerId": "",
+            "name": "Get-Task",
+            "url": "/task/",
+            "method": "GET",
+            "sortNum": 20000,
+            "created": "2024-04-25T17:44:41.720Z",
+            "modified": "2024-04-25T17:58:39.404Z",
+            "headers": []
+        },
+        {
+            "_id": "db936c48-be32-44c1-b793-fc2812bad038",
+            "colId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
+            "containerId": "",
+            "name": "Delete-Task",
+            "url": "/task/662a987debb3dd03de402963",
+            "method": "DELETE",
+            "sortNum": 30000,
+            "created": "2024-04-25T17:59:21.152Z",
+            "modified": "2024-04-26T01:32:45.215Z",
+            "headers": []
+        }
+    ],
+    "settings": {
+        "options": {
+            "baseUrl": "http://localhost:8080/almacenadora/v1"
+        }
+    },
+    "ref": "1v_T3oc524a_9WUqzl2OV3yTW1A3vYVGs9FuJ-StyESqI9YBWKS9IxjgRmgAqimYuLiDb-Coy6JaKhbn_jRbAw"
+}
