@@ -4,12 +4,13 @@ import cors from "cors";
 import helmet from "helmet";
 import morgan from "morgan";
 import { dbConnection } from "./mongo.js";
-// import routes from 'routes.js';
+import taskRoutes from "../src/task/task.routes.js";
 
 class Server {
   constructor() {
     this.app = express();
     this.port = process.env.PORT;
+    this.taskPath = "/almacenadora/v1/task";
 
     this.middlewares();
     this.conectDB();
@@ -20,7 +21,9 @@ class Server {
     await dbConnection();
   }
 
-  routes() {}
+  routes() {
+    this.app.use(this.taskPath, taskRoutes);
+  }
 
   middlewares() {
     this.app.use(express.urlencoded({ extended: false }));
