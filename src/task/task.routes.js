@@ -6,7 +6,7 @@ import { validateFields } from "../middlewares/validate-fields.js";
 import { checkTaskIdExistence } from "../middlewares/validate-task.js";
 
 // Controller
-import { createTask, getTask, deleteTask } from "./task.controller.js";
+import { createTask, getTask, deleteTask, updateTask } from "./task.controller.js";
 
 const router = Router();
 
@@ -31,6 +31,16 @@ router.post(
     validateFields,
   ],
   createTask
+);
+
+router.put(
+  "/:taskId",
+  [
+    check("taskId", "The id is not a valid MongoDB format").isMongoId(),
+    check("taskId").custom(checkTaskIdExistence),
+    validateFields,
+  ],
+  updateTask
 );
 
 router.delete(
