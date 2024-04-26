@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "Almacenadora",
     "collectionId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
-    "dateExported": "2024-04-26T01:49:06.547Z",
+    "dateExported": "2024-04-26T17:05:58.888Z",
     "version": "1.2",
     "folders": [],
     "requests": [
@@ -46,6 +46,23 @@
             "created": "2024-04-25T17:59:21.152Z",
             "modified": "2024-04-26T01:32:45.215Z",
             "headers": []
+        },
+        {
+            "_id": "7d5c45be-baa9-4d14-b9c6-505bbd6b0413",
+            "colId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
+            "containerId": "",
+            "name": "Update-task",
+            "url": "/task/662a97f6629d67588b42c4f4",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-04-26T16:59:49.711Z",
+            "modified": "2024-04-26T17:03:37.545Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameTask\": \"Hacer frontend\",\n  \"description\": \"Realizar el diseño del login y register\",\n  \"startDate\": \"2024-04-25T12:00:00.000Z\",\n  \"endDate\": \"2024-04-30T12:00:00.000Z\",\n  \"author\": \"Luis\"\n}",
+                "form": []
+            }
         }
     ],
     "settings": {
@@ -53,5 +70,5 @@
             "baseUrl": "http://localhost:8080/almacenadora/v1"
         }
     },
-    "ref": "1v_T3oc524a_9WUqzl2OV3yTW1A3vYVGs9FuJ-StyESqI9YBWKS9IxjgRmgAqimYuLiDb-Coy6JaKhbn_jRbAw"
+    "ref": "1v_T3oc524a_9WUqzl2OV0FeUXPPSxI_HA7Ma5VucJmGwNsjskZbri-lhk5opjsuzh56ejiGwWTGbGzo5iJC-Q"
 }
