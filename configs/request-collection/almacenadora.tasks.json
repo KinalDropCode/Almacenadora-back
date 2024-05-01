@@ -1,0 +1,102 @@
+[{
+  "_id": {
+    "$oid": "66328a15ed34f01cf8053d95"
+  },
+  "nameTask": "Cuarto",
+  "description": "Realizar limpieza a mi cuarto",
+  "startDate": {
+    "$date": "2024-01-30T12:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-02-02T12:00:00.000Z"
+  },
+  "statusTask": "Earring",
+  "author": "Elmer Santos",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66328b60ed34f01cf8053d9f"
+  },
+  "nameTask": "Limpieza",
+  "description": "hacer la limpieza en la cocina",
+  "startDate": {
+    "$date": "2024-04-25T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-04-26T00:00:00.000Z"
+  },
+  "statusTask": "Earring",
+  "author": "Melisa Hernández",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66328bf728d01fa4f83483ae"
+  },
+  "nameTask": "Cocinar",
+  "description": "Preparar el almuerzo",
+  "startDate": {
+    "$date": "2024-07-25T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-07-26T00:00:00.000Z"
+  },
+  "statusTask": "Completed",
+  "author": "Rodrigo García",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66329a1e1b2a4415f2720aeb"
+  },
+  "nameTask": "Limpiar mi pc",
+  "description": "Hacerle mantenimiento a mi pc",
+  "startDate": {
+    "$date": "2024-09-23T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-10-01T00:00:00.000Z"
+  },
+  "statusTask": "Completed",
+  "author": "Mateo Valladares",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66329a2e1b2a4415f2720aed"
+  },
+  "nameTask": "Ordenar",
+  "description": "Ordenar mi escritorio",
+  "startDate": {
+    "$date": "2024-03-23T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-03-30T00:00:00.000Z"
+  },
+  "statusTask": "Completed",
+  "author": "Alfredo Jimenez",
+  "status": true,
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "66329c63622c909cb6d383f5"
+  },
+  "nameTask": "Supermercado",
+  "description": "hacer las compras del super",
+  "startDate": {
+    "$date": "2024-06-19T00:00:00.000Z"
+  },
+  "endDate": {
+    "$date": "2024-06-20T00:00:00.000Z"
+  },
+  "statusTask": "Earring",
+  "author": "Enrique Sanchez",
+  "status": true,
+  "__v": 0
+}]

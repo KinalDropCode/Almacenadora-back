@@ -12,7 +12,7 @@ export const createTask = async (req, res) => {
 };
 
 export const deleteTask = async (req, res) => {
-  const taskId = req.params.taskId;
+  const taskId = req.params.taskId; z
 
   try {
     const task = await Task.findById(taskId);
@@ -47,5 +47,45 @@ export const updateTask = async (req, res) => {
   } catch (e) {
     res.status(500).json("Internal Server Error");
     console.log(e);
+  }
+};
+
+function formatDate(date) {
+  const day = String(date.getDate()).padStart(2, '0');
+  const month = String(date.getMonth() + 1).padStart(2, '0'); // Los meses van de 0 a 11, por eso se suma 1
+  const year = date.getFullYear();
+
+  return `${day}/${month}/${year}`;
+}
+
+export const getCompletedTasks = async (req, res) => {
+  try {
+    const completedTasks = await Task.find({ statusTask: "Completed", status: true })
+      .sort({ startDate: 1 })
+      .lean();
+    completedTasks.forEach(task => {
+      task.startDate = formatDate(task.startDate);
+      task.endDate = formatDate(task.endDate);
+    });
+    res.status(200).json({ completedTasks });
+  } catch (error) {
+    res.status(500).json("Internal Server Error");
+    console.error(error);
+  }
+};
+
+export const getEarringTasks = async (req, res) => {
+  try {
+    const earringTasks = await Task.find({ statusTask: "Earring", status: true })
+      .sort({ startDate: 1 })
+      .lean();
+      earringTasks.forEach(task => {
+      task.startDate = formatDate(task.startDate);
+      task.endDate = formatDate(task.endDate);
+    });
+    res.status(200).json({ earringTasks });
+  } catch (error) {
+    res.status(500).json("Internal Server Error");
+    console.error(error);
   }
 };

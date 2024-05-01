@@ -1,74 +1,118 @@
 {
     "clientName": "Thunder Client",
     "collectionName": "Almacenadora",
-    "collectionId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
-    "dateExported": "2024-04-26T17:05:58.888Z",
+    "collectionId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+    "dateExported": "2024-05-01T19:53:40.842Z",
     "version": "1.2",
-    "folders": [],
-    "requests": [
+    "folders": [
         {
-            "_id": "961615d3-5155-4d74-b5ec-8ca011191548",
-            "colId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
+            "_id": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "Task",
             "containerId": "",
-            "name": "Create-Task",
-            "url": "/task/create",
-            "method": "POST",
-            "sortNum": 10000,
-            "created": "2024-04-25T17:25:33.602Z",
-            "modified": "2024-04-25T17:52:59.421Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"nameTask\": \"2\",\n  \"description\": \"Descripción de la tarea\",\n  \"startDate\": \"2024-04-25T12:00:00.000Z\",\n  \"endDate\": \"2024-04-30T12:00:00.000Z\",\n  \"author\": \"Juan\"\n}",
-                "form": []
-            }
-        },
-        {
-            "_id": "29a538b4-6869-4ec5-acac-eba2056d3f65",
-            "colId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
-            "containerId": "",
-            "name": "Get-Task",
-            "url": "/task/",
-            "method": "GET",
-            "sortNum": 20000,
-            "created": "2024-04-25T17:44:41.720Z",
-            "modified": "2024-04-25T17:58:39.404Z",
-            "headers": []
-        },
-        {
-            "_id": "db936c48-be32-44c1-b793-fc2812bad038",
-            "colId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
-            "containerId": "",
-            "name": "Delete-Task",
-            "url": "/task/662a987debb3dd03de402963",
-            "method": "DELETE",
-            "sortNum": 30000,
-            "created": "2024-04-25T17:59:21.152Z",
-            "modified": "2024-04-26T01:32:45.215Z",
-            "headers": []
-        },
-        {
-            "_id": "7d5c45be-baa9-4d14-b9c6-505bbd6b0413",
-            "colId": "867785ce-906f-40b7-a38b-e5d1c74e64db",
-            "containerId": "",
-            "name": "Update-task",
-            "url": "/task/662a97f6629d67588b42c4f4",
-            "method": "PUT",
-            "sortNum": 40000,
-            "created": "2024-04-26T16:59:49.711Z",
-            "modified": "2024-04-26T17:03:37.545Z",
-            "headers": [],
-            "body": {
-                "type": "json",
-                "raw": "{\n  \"nameTask\": \"Hacer frontend\",\n  \"description\": \"Realizar el diseño del login y register\",\n  \"startDate\": \"2024-04-25T12:00:00.000Z\",\n  \"endDate\": \"2024-04-30T12:00:00.000Z\",\n  \"author\": \"Luis\"\n}",
-                "form": []
-            }
+            "created": "2024-05-01T18:23:11.699Z",
+            "sortNum": 20000
         }
     ],
-    "settings": {
-        "options": {
-            "baseUrl": "http://localhost:8080/almacenadora/v1"
+    "requests": [
+        {
+            "_id": "3de352de-28b8-433e-816f-fd4d3382c5b9",
+            "colId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+            "containerId": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "ListTask",
+            "url": "http://127.0.0.1:8080/almacenadora/v1/task",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-01T18:23:24.581Z",
+            "modified": "2024-05-01T18:26:14.649Z",
+            "headers": []
+        },
+        {
+            "_id": "65a15a1e-c0bb-4aa3-9e44-c79baa640eca",
+            "colId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+            "containerId": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "AddTask",
+            "url": "http://127.0.0.1:8080/almacenadora/v1/task/create",
+            "method": "POST",
+            "sortNum": 30000,
+            "created": "2024-05-01T18:26:35.889Z",
+            "modified": "2024-05-01T19:38:22.932Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameTask\": \"Limpieza\", \n  \"description\": \"hacer la limpieza en la cocina\", \n  \"startDate\": \"2024-03-23\", \n  \"endDate\": \"2024-03-30\", \n  \"author\": \"Yo\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "c2b77ebb-ff6b-4490-ac9b-df60b64928e7",
+            "colId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+            "containerId": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "EditTask",
+            "url": "http://127.0.0.1:8080/almacenadora/v1/task/66328a15ed34f01cf8053d95",
+            "method": "PUT",
+            "sortNum": 40000,
+            "created": "2024-05-01T18:30:09.290Z",
+            "modified": "2024-05-01T18:31:33.620Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"nameTask\": \"MO\", \n  \"description\": \"A\", \n  \"startDate\": \"2024-04-30T12:00:00.000Z\", \n  \"endDate\": \"2024-04-30T12:00:00.000Z\", \n  \"author\": \"Tu\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "12249ae2-b3e0-4ce4-969e-365cea974fb5",
+            "colId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+            "containerId": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "DeleteTask",
+            "url": "http://127.0.0.1:8080/almacenadora/v1/task/66328a15ed34f01cf8053d95",
+            "method": "DELETE",
+            "sortNum": 50000,
+            "created": "2024-05-01T18:32:27.483Z",
+            "modified": "2024-05-01T18:32:37.704Z",
+            "headers": []
+        },
+        {
+            "_id": "ba4f910c-24f2-476d-bfc5-c8d3bb58d472",
+            "colId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+            "containerId": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "CompletedTask",
+            "url": "http://127.0.0.1:8080/almacenadora/v1/task/66328bf728d01fa4f83483ae",
+            "method": "PUT",
+            "sortNum": 60000,
+            "created": "2024-05-01T19:01:28.257Z",
+            "modified": "2024-05-01T19:17:52.404Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"statusTask\": \"Completed\"\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "dfbc1ce4-86c8-45b7-811f-c8af8a27f12f",
+            "colId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+            "containerId": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "viewCompletedTask",
+            "url": "http://127.0.0.1:8080/almacenadora/v1/task/completed",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-05-01T19:09:31.862Z",
+            "modified": "2024-05-01T19:10:24.219Z",
+            "headers": []
+        },
+        {
+            "_id": "a8b064c6-8999-43bd-9d73-406f1d6d421b",
+            "colId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+            "containerId": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "viewEarringTask",
+            "url": "http://127.0.0.1:8080/almacenadora/v1/task/earring",
+            "method": "GET",
+            "sortNum": 80000,
+            "created": "2024-05-01T19:13:24.059Z",
+            "modified": "2024-05-01T19:13:33.363Z",
+            "headers": []
         }
-    },
-    "ref": "1v_T3oc524a_9WUqzl2OV0FeUXPPSxI_HA7Ma5VucJmGwNsjskZbri-lhk5opjsuzh56ejiGwWTGbGzo5iJC-Q"
+    ],
+    "ref": "bYvCAp3JCfBEK5_jKdjFcAAsM7hcJYWPiQXwiLrE2BP-HceJgI2sIHGJiTeUVZWMTAHkDT0dOEDI5FR3go2eHQ"
 }

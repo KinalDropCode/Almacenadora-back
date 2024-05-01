@@ -6,11 +6,15 @@ import { validateFields } from "../middlewares/validate-fields.js";
 import { checkTaskIdExistence } from "../middlewares/validate-task.js";
 
 // Controller
-import { createTask, getTask, deleteTask, updateTask } from "./task.controller.js";
+import { createTask, getTask, deleteTask, updateTask, getCompletedTasks, getEarringTasks } from "./task.controller.js";
 
 const router = Router();
 
 router.get("", getTask);
+
+router.get('/completed', getCompletedTasks);
+
+router.get('/earring', getEarringTasks);
 
 router.post(
   "/create",

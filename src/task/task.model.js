@@ -31,9 +31,16 @@ const TaskSchema = Schema({
   },
 });
 
+function formatDate(date) {
+  const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
+  return date.toLocaleDateString('es-ES', options);
+}
+
 TaskSchema.methods.toJSON = function () {
-  const { __v, _id, ...task } = this.toObject();
+  const { __v, _id, startDate, endDate, ...task } = this.toObject();
   task.uid = _id;
+  task.startDate = startDate ? formatDate(startDate) : null;
+  task.endDate = endDate ? formatDate(endDate) : null;
   return task;
 };
 
