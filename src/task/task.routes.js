@@ -1,20 +1,30 @@
-import { check } from "express-validator";
 import { Router } from "express";
+import { check } from "express-validator";
 
 // Validates
 import { validateFields } from "../middlewares/validate-fields.js";
 import { checkTaskIdExistence } from "../middlewares/validate-task.js";
 
 // Controller
-import { createTask, getTask, deleteTask, updateTask, getCompletedTasks, getEarringTasks } from "./task.controller.js";
+import {
+  createTask,
+  deleteTask,
+  getCompletedTasks,
+  getEarringTasks,
+  getTask,
+  getTaskSearch,
+  updateTask,
+} from "./task.controller.js";
 
 const router = Router();
 
 router.get("", getTask);
 
-router.get('/completed', getCompletedTasks);
+router.get("/search", getTaskSearch);
 
-router.get('/earring', getEarringTasks);
+router.get("/completed", getCompletedTasks);
+
+router.get("/earring", getEarringTasks);
 
 router.post(
   "/create",

@@ -12,7 +12,8 @@ export const createTask = async (req, res) => {
 };
 
 export const deleteTask = async (req, res) => {
-  const taskId = req.params.taskId; z
+  const taskId = req.params.taskId;
+  z;
 
   try {
     const task = await Task.findById(taskId);
@@ -51,8 +52,8 @@ export const updateTask = async (req, res) => {
 };
 
 function formatDate(date) {
-  const day = String(date.getDate()).padStart(2, '0');
-  const month = String(date.getMonth() + 1).padStart(2, '0'); // Los meses van de 0 a 11, por eso se suma 1
+  const day = String(date.getDate()).padStart(2, "0");
+  const month = String(date.getMonth() + 1).padStart(2, "0"); // Los meses van de 0 a 11, por eso se suma 1
   const year = date.getFullYear();
 
   return `${day}/${month}/${year}`;
@@ -60,10 +61,13 @@ function formatDate(date) {
 
 export const getCompletedTasks = async (req, res) => {
   try {
-    const completedTasks = await Task.find({ statusTask: "Completed", status: true })
+    const completedTasks = await Task.find({
+      statusTask: "Completed",
+      status: true,
+    })
       .sort({ startDate: 1 })
       .lean();
-    completedTasks.forEach(task => {
+    completedTasks.forEach((task) => {
       task.startDate = formatDate(task.startDate);
       task.endDate = formatDate(task.endDate);
     });
@@ -76,10 +80,13 @@ export const getCompletedTasks = async (req, res) => {
 
 export const getEarringTasks = async (req, res) => {
   try {
-    const earringTasks = await Task.find({ statusTask: "Earring", status: true })
+    const earringTasks = await Task.find({
+      statusTask: "Earring",
+      status: true,
+    })
       .sort({ startDate: 1 })
       .lean();
-      earringTasks.forEach(task => {
+    earringTasks.forEach((task) => {
       task.startDate = formatDate(task.startDate);
       task.endDate = formatDate(task.endDate);
     });
@@ -87,5 +94,22 @@ export const getEarringTasks = async (req, res) => {
   } catch (error) {
     res.status(500).json("Internal Server Error");
     console.error(error);
+  }
+};
+
+export const getTaskSearch = async (req, res) => {
+  try {
+    const { name } = req.body;
+    const query = { status: true };
+
+    if (name) {
+      query.nameTask = { $regex: name, $options: "i" }; //
+    }
+
+    const task = await Task.find(query);
+    res.status(200).json({ task });
+  } catch (error) {
+    res.status(500).json("Internal Server Error");
+    console.log(error);
   }
 };
