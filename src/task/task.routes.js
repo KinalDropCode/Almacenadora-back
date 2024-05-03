@@ -15,6 +15,7 @@ import {
   getTaskSearch,
   updateTask,
   completeTask,
+  pendingTask,
 } from "./task.controller.js";
 
 const router = Router();
@@ -76,6 +77,16 @@ router.put(
     validateFields,
   ],
   completeTask
+);
+
+router.put(
+  "/pending/:taskId",
+  [
+    check("taskId", "The id is not a valid MongoDB format").isMongoId(),
+    check("taskId").custom(checkTaskIdExistence),
+    validateFields,
+  ],
+  pendingTask
 );
 
 
