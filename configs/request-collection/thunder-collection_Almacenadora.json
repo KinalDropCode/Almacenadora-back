@@ -2,7 +2,7 @@
     "clientName": "Thunder Client",
     "collectionName": "Almacenadora",
     "collectionId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
-    "dateExported": "2024-05-01T19:53:40.842Z",
+    "dateExported": "2024-05-03T00:20:40.595Z",
     "version": "1.2",
     "folders": [
         {
@@ -112,7 +112,24 @@
             "created": "2024-05-01T19:13:24.059Z",
             "modified": "2024-05-01T19:13:33.363Z",
             "headers": []
+        },
+        {
+            "_id": "08826388-9e50-4507-8fca-a7c052b0e539",
+            "colId": "11f17e00-8d74-4aef-b260-21e0d6ec62b8",
+            "containerId": "6ca6d59b-028d-4e90-895e-c310695dbfd7",
+            "name": "searchTask",
+            "url": "http://127.0.0.1:8080/almacenadora/v1/task/search",
+            "method": "GET",
+            "sortNum": 90000,
+            "created": "2024-05-03T00:17:13.202Z",
+            "modified": "2024-05-03T00:20:19.156Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"name\": \"limpiar mi pc\"\n}",
+                "form": []
+            }
         }
     ],
-    "ref": "bYvCAp3JCfBEK5_jKdjFcAAsM7hcJYWPiQXwiLrE2BP-HceJgI2sIHGJiTeUVZWMTAHkDT0dOEDI5FR3go2eHQ"
+    "ref": "bYvCAp3JCfBEK5_jKdjFcAmDuN8cxLzLDqVxkgWcBXofv7zJImHelgfj7digtxbI_10Xr3PNky9XuVo87TjORA"
 }
