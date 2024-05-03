@@ -14,6 +14,7 @@ import {
   getTask,
   getTaskSearch,
   updateTask,
+  completeTask,
 } from "./task.controller.js";
 
 const router = Router();
@@ -66,5 +67,16 @@ router.delete(
   ],
   deleteTask
 );
+
+router.put(
+  "/complete/:taskId",
+  [
+    check("taskId", "The id is not a valid MongoDB format").isMongoId(),
+    check("taskId").custom(checkTaskIdExistence),
+    validateFields,
+  ],
+  completeTask
+);
+
 
 export default router;

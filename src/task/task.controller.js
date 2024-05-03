@@ -114,3 +114,16 @@ export const getTaskSearch = async (req, res) => {
     console.log(error);
   }
 };
+
+export const completeTask = async (req, res) => {
+  const taskId = req.params.taskId;
+
+  try {
+    await Task.findByIdAndUpdate(taskId, { statusTask: "Completed" });
+    const taskUpdate = await Task.findById(taskId);
+    res.status(200).json({ msg: "Status task updated successfully.", taskUpdate });
+  } catch (e) {
+    res.status(500).json("Internal Server Error");
+    console.log(e);
+  }
+};
